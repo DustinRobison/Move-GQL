@@ -1,0 +1,21 @@
+{
+  "name": "move-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,graphql -x node src/index.js",
+    "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.3",
+    "express": "^4.17.1",
+    "graphql": "^14.5.6",
+    "nodemon": "^1.19.2"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "eb17d577-b9c5-4636-97d5-77b9c5b636b0",
+    "name": "ZB APAC",
+    "type": "MED_DEVICE_COMPANY",
+    "address": {
+      "line1": "123 Narabang Way",
+      "city": "Belrose",
+      "state": "NSW",
+      "postalCode": "2085",
+      "valid": true
+    },
+    "email": {
+      "user": "admin",
+      "domain": "zimmerbiomet",
+      "suffix": "com",
+      "valid": true,
+      "fullEmail": "admin@zimmerbiomet.com"
+    },
+    "publicVisible": false,
+    "active": true
+  }
+]
