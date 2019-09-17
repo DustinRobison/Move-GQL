@@ -1,0 +1,27 @@
+input PagingParams {
+  startRecordIdx: Int
+  pageSize: Int
+}
+
+input OrderByParams {
+  field: String
+  direction: String
+}
+
+type Address {
+  attn: String
+  line1: String
+  line2: String
+  city: String
+  state: String
+  postalCode: String
+  valid: Boolean
+}
+
+type Email {
+  fullEmail: String
+  user: String
+  domain: String
+  suffix: String
+  valid: Boolean
+}

@@ -1,0 +1,35 @@
+input OrgInput {
+  id: ID!
+}
+
+type OrgOutput {
+  id: ID
+  reference: String
+  name: String
+  type: OrgType
+  address: Address
+  email: Email
+  publicVisible: Boolean!
+  active: Boolean!
+}
+
+input OrgsInput {
+  search: String
+  name: String
+  type: OrgType
+  reference: String
+  active: Boolean
+}
+
+type OrgsOutput {
+  data: [OrgOutput]
+  moreData: Boolean
+}
+
+enum OrgType {
+  MED_DEVICE_COMPANY
+  HEALTH_SYSTEM
+  DISTRIBUTOR
+  PRACTICE
+  PARTNER
+}

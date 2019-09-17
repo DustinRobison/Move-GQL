@@ -1,0 +1,7 @@
+type Delegate {
+  id: ID
+  name: String!
+  type: String
+  linkedId: ID
+  active: Boolean
+}
