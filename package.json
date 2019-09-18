@@ -1,6 +1,7 @@
 {
   "name": "move-graphql",
   "version": "1.0.0",
+  "proxy": "https://zbapac-dev.movemedical.com",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +17,9 @@
     "express": "^4.17.1",
     "graphql": "^14.5.6",
     "graphql-import": "^0.7.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {}
 }

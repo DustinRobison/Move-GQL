@@ -11,8 +11,7 @@ type Message {
   stopped: Boolean
   archived: Boolean
   unread: Int
-
-  lastSenderId: ID
+  lastSender: [Person]
   links: [Attribute]
 }
 
