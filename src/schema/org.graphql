@@ -2,7 +2,7 @@ input OrgInput {
   id: ID!
 }
 
-type OrgOutput {
+type Org {
   id: ID
   reference: String
   name: String
@@ -21,8 +21,8 @@ input OrgsInput {
   active: Boolean
 }
 
-type OrgsOutput {
-  data: [OrgOutput]
+type Orgs {
+  data: [Org]
   moreData: Boolean
 }
 

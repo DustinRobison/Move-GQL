@@ -1,0 +1,49 @@
+input PersonInput {
+  id: ID!
+}
+
+type Person {
+  id: ID
+  perspective: UserPerspective
+  name: PersonName
+  email: Email
+  status: Status
+  displayName: String
+  timeZone: String
+  locale: Locale
+}
+
+input PersonsInput {
+  orgId: String
+  search: String
+  perspective: UserPerspective
+}
+
+type Persons {
+  data: [Person]
+  moreData: Boolean
+}
+
+enum UserPerspective {
+  ADMIN
+  SYSTEM_ADMIN
+  HEALTH_SYSTEM_AE
+  HEALTH_SYSTEM_HCP
+  HEALTH_SYSTEM_HCR
+  HEALTH_SYSTEM_PHYSICIAN
+  MED_DEVICE_COMPANY_AE
+  MED_DEVICE_COMPANY_HCP
+  MED_DEVICE_COMPANY_HCR
+  MED_DEVICE_COMPANY_DCE
+  DISTRIBUTOR_AE
+  DISTRIBUTOR_HCR
+  DISTRIBUTOR_HCP
+  PRACTICE_AE
+  PRACTICE_HCR
+  PRACTICE_HCP
+  PRACTICE_PHYSICIAN
+  PARTNER_AE
+  PARTNER_HCP
+  PARTNER_HCR
+  CONSUMER
+}

@@ -1,0 +1,27 @@
+input NoteInput {
+  id: ID!
+  attrId: ID
+}
+
+type Note {
+  id: ID
+  org: [Org]
+  ownerOrgUnit: [Org]
+  attr: [Attribute]
+  orgVisible: Boolean
+  publicVisible: Boolean
+  noteValue: String
+  createById: String
+  dateCreated: String
+  createdByDisplayName: String
+}
+
+input NotesInput {
+  attrId: ID!
+  noteIds: [ID]
+}
+
+type Notes {
+  data: [Note]
+  moreData: Boolean
+}

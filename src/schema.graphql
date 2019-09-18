@@ -1,18 +1,27 @@
 # import * from './schema/common.graphql'
 # import * from './schema/org.graphql'
 # import * from './schema/delegate.graphql'
+# import * from './schema/notes.graphql'
+# import * from './schema/message.graphql'
+# import * from './schema/person.graphql'
 
 type Query {
-  org(where: OrgInput): OrgOutput
-  orgs(
-    where: OrgsInput
-    orderBy: OrderByParams
-    paging: PagingParams
-  ): OrgsOutput
-  delegate(where: DelegateInput): DelegateOutput
+  org(where: OrgInput): Org
+  orgs(where: OrgsInput, orderBy: OrderByParams, paging: PagingParams): Orgs
+
+  person(where: PersonInput): Person
+  persons(where: PersonsInput, paging: PagingParams): Persons
+
+  delegate(where: DelegateInput): Delegate
   delegates(
     where: DelegatesInput
     orderBy: OrderByParams
     paging: PagingParams
-  ): DelegatesOutput
+  ): Delegates
+
+  note(where: NoteInput): Note
+  notes(where: NotesInput, paging: PagingParams): Notes
+
+  message(where: MessageInput): Message
+  messages(where: MessagesInput, paging: PagingParams): Messages
 }

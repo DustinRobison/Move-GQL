@@ -8,6 +8,15 @@ input OrderByParams {
   direction: String
 }
 
+type PersonName {
+  title: String
+  givenName: String
+  middleName: String
+  familyName: String
+  suffix: String
+  displayName: String
+}
+
 type Address {
   attn: String
   line1: String
@@ -24,4 +33,55 @@ type Email {
   domain: String
   suffix: String
   valid: Boolean
+}
+
+type Attribute {
+  id: ID
+  type: AttributableType
+  displayText: String
+}
+
+enum AttributableType {
+  MDC_CASE_EVENT
+  LOAN
+  STOCK_ORDER
+  SALES_ORDER
+  ITEM
+  SHIPMENT
+  PACKAGE
+  ORG
+  BIZ_UNIT
+  ORG_UNIT
+  FACILITY
+  TEAM
+  STOCK
+  PROCEDURE
+  AE
+  CONSUMER
+  DCE
+  HCR
+  PATIENT
+  PHYSICIAN
+  SYSTEM_ADMIN
+  USER
+  INVENTORY_TYPE
+  CUSTOMER
+  AUDIT
+  IMPORT_LOG
+  SHIP_TO_ADDRESS
+  DELIVER_TO_ADDRESS
+  BILL_TO_ADDRESS
+}
+
+enum Locale {
+  EN
+  FR
+  AU
+  UK
+  KR
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
 }

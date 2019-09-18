@@ -2,7 +2,7 @@ input DelegateInput {
   id: ID!
 }
 
-type DelegateOutput {
+type Delegate {
   id: ID
   type: DelegateType
   linkedId: String
@@ -17,8 +17,8 @@ input DelegatesInput {
   search: String
 }
 
-type DelegatesOutput {
-  data: [DelegateOutput]
+type Delegates {
+  data: [Delegate]
   moreData: Boolean
 }
 

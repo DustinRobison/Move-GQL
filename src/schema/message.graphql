@@ -1,0 +1,34 @@
+input MessageInput {
+  id: ID!
+}
+
+type Message {
+  id: ID
+  urgency: String
+  purpose: String
+  allParticipantsDisplayText: String
+  particiapntsDisplayText: [String]
+  stopped: Boolean
+  archived: Boolean
+  unread: Int
+
+  lastSenderId: ID
+  links: [Attribute]
+}
+
+input MessagesInput {
+  attrId: ID
+  attrType: AttributableType
+  search: String
+  archived: Boolean
+  stopped: Boolean
+  unread: Boolean
+  contactIds: [ID]
+  urgencyStartDate: String
+  urgencyEndDate: String
+}
+
+type Messages {
+  data: [Message]
+  moreData: Boolean
+}
