@@ -6,8 +6,12 @@
 # clients can execute, along with the return type for each . In this
 # case, the "books" query returns an array of zero or more Books (defined above).
 type Query {
-  orgs(where: OrgsInput): OrgsOutput
-  org(where: OrgInput, orderBy: OrderByParams, paging: PagingParams): OrgOutput
+  org(where: OrgInput): OrgOutput
+  orgs(
+    where: OrgsInput
+    orderBy: OrderByParams
+    paging: PagingParams
+  ): OrgsOutput
   delegate(where: DelegateInput): DelegateOutput
   delegates(
     where: DelegatesInput
