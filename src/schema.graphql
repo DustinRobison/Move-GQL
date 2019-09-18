@@ -8,5 +8,10 @@
 type Query {
   orgs(where: OrgsInput): OrgsOutput
   org(where: OrgInput, orderBy: OrderByParams, paging: PagingParams): OrgOutput
-  delegates: [Delegate]
+  delegate(where: DelegateInput): DelegateOutput
+  delegates(
+    where: DelegatesInput
+    orderBy: OrderByParams
+    paging: PagingParams
+  ): DelegatesOutput
 }

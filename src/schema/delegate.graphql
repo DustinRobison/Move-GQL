@@ -1,7 +1,34 @@
-type Delegate {
+input DelegateInput {
+  id: ID!
+}
+
+type DelegateOutput {
   id: ID
-  name: String!
-  type: String
-  linkedId: ID
+  type: DelegateType
+  linkedId: String
+  name: String
+  email: Email
   active: Boolean
+}
+
+input DelegatesInput {
+  id: String
+  type: DelegateType
+  search: String
+}
+
+type DelegatesOutput {
+  data: [DelegateOutput]
+  moreData: Boolean
+}
+
+enum DelegateType {
+  AE
+  DCE
+  HCR
+}
+
+enum DelegateOrderBy {
+  NAME
+  TYPE
 }
