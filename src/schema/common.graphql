@@ -38,7 +38,8 @@ type Email {
 type Attribute {
   id: ID
   type: AttributableType
-  displayText: String
+  label: String
+  value: String
 }
 
 enum OrgType {

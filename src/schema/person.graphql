@@ -11,12 +11,15 @@ type Person {
   displayName: String
   timeZone: String
   locale: Locale
+  org: Org
 }
 
 input PersonsInput {
   orgId: String
   search: String
   perspective: UserPerspective
+  paging: PagingParams
+  orderBy: OrderByParams
 }
 
 type Persons {

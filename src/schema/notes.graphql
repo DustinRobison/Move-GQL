@@ -5,9 +5,9 @@ input NoteInput {
 
 type Note {
   id: ID
-  org: [Org]
-  ownerOrgUnit: [Org]
-  attr: [Attribute]
+  org: Org
+  ownerOrgUnit: Org
+  attr: Attribute
   orgVisible: Boolean
   publicVisible: Boolean
   noteValue: String

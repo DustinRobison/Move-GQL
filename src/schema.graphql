@@ -6,13 +6,14 @@
 # import * from './schema/message.graphql'
 # import * from './schema/person.graphql'
 # import * from './schema/procedure.graphql'
+# import * from './schema/orgUnit.graphql'
 
 type Query {
   org(where: OrgInput): Org
-  orgs(where: OrgsInput, orderBy: OrderByParams, paging: PagingParams): Orgs
+  orgs(where: OrgsInput): Orgs
 
   person(where: PersonInput): Person
-  persons(where: PersonsInput, paging: PagingParams): Persons
+  persons(where: PersonsInput): Persons
 
   delegate(where: DelegateInput): Delegate
   delegates(where: DelegatesInput): Delegates
@@ -28,4 +29,12 @@ type Query {
 
   procedure(where: ProcedureInput): Procedure
   procedures(where: ProceduresInput): Procedures
+
+  orgUnit(where: OrgUnitInput): OrgUnit
+  orgUnits(where: OrgUnitsInput): OrgUnits
 }
+
+# Notes
+# label vs displayText field name
+# single entity request params entity(id: ID!) or entity(where: entityInput), type entityInput { id: ID! }
+# Attribute to single entity instead of OrgUnits Attributes etc.

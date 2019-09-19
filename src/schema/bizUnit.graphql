@@ -11,6 +11,7 @@ type BizUnit {
   description: String
   publicListing: Boolean
   active: Boolean
+  linkedOrgUnits: [OrgUnit]
 }
 
 input BizUnitsInput {

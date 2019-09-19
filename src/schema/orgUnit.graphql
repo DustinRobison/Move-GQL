@@ -1,0 +1,39 @@
+input OrgUnitInput {
+  id: ID!
+}
+
+type OrgUnit {
+  id: ID
+  name: String
+  description: String
+  label: String
+  publicName: String
+  schema: String
+  email: Email
+  active: Boolean
+  bottom: Boolean
+  fulfillmentLeadTimeHours: Int
+  requirementsLeadTimeHours: Int
+  allowRemoteUsage: Boolean
+  allowMixedInventoryTypeUsage: Boolean
+  signUpAllowed: Boolean
+  publicListing: Boolean
+  org: Org
+  parentOrgUnit: OrgUnit
+  rootOrgUnit: OrgUnit
+  opsOrgUnit: OrgUnit
+  salesOrgUnit: OrgUnit
+  attributes: [Attribute]
+  attributeContacts: [Person]
+}
+
+input OrgUnitsInput {
+  search: String
+  paging: PagingParams
+  orderBy: OrderByParams
+}
+
+type OrgUnits {
+  data: [OrgUnit]
+  moreData: Boolean
+}

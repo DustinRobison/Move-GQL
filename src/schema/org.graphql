@@ -19,6 +19,8 @@ input OrgsInput {
   type: OrgType
   reference: String
   active: Boolean
+  orderBy: OrderByParams
+  paging: PagingParams
 }
 
 type Orgs {

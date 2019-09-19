@@ -5,9 +5,12 @@ input ProcedureInput {
 type Procedure {
   id: ID
   name: String
-  bodySideRequired: Boolean
   description: String
+  icdCode: String
+  bodySideRequired: Boolean
   active: Boolean
+  bizUnit: BizUnit
+  parentProcedure: Procedure
 }
 
 input ProceduresInput {
