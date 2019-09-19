@@ -1,0 +1,58 @@
+input FacilityInput {
+  id: ID!
+}
+
+type Facility {
+  id: ID!
+  org: Org
+  type: FacilityType
+  name: String
+  displayText: String
+  email: Email
+  timeZone: String
+  caseLoaningMethodology: CaseLoaningMethodologyType
+  restockType: RestockType
+  contact: Person
+  publicVisible: Boolean
+  binManaged: Boolean
+  autoPutAway: Boolean
+  opsProfile: OpsProfile
+  deliveryScheduleProfile: DeliveryProfile
+  courierProfile: CourierProfile
+  lagTime: Int
+  splitImplantsAndInstruments: Boolean
+
+  loanSplitMethod: LoanSplitMethod
+  optimizeLoans: Boolean
+  customer: Customer
+  defaultDeliverToAddress: Address
+  active: Boolean
+}
+
+input FacilitiesInput {
+  search: String
+  paging: PagingParams
+  orderBy: OrderByParams
+}
+
+type Facilities {
+  data: [Facility]
+  moreData: Boolean
+}
+
+enum FacilityType {
+  MDC_FIELD_OFFICE
+  DISTRIBUTION_CENTER
+  SALES_OFFICE
+  CLINIC
+  HOSPITAL
+  SURGERY_CENTER
+  SCAN_CENTER
+  STERILIZATION_CENTER
+  DISTRIBUTOR
+}
+
+enum CaseLoaningMethodologyType {
+  LOAN_PER_CASE
+  LOAN_PER_DAY
+}

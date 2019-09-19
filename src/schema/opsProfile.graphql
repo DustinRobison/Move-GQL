@@ -1,0 +1,8 @@
+input OpsProfileInput {
+  id: ID!
+}
+
+type OpsProfile {
+  id: ID
+  name: String
+}

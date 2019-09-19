@@ -8,6 +8,10 @@
 # import * from './schema/procedure.graphql'
 # import * from './schema/orgUnit.graphql'
 # import * from './schema/facility.graphql'
+# import * from './schema/opsProfile.graphql'
+# import * from './schema/deliveryProfile.graphql'
+# import * from './schema/courierProfile.graphql'
+# import * from './schema/customer.graphql'
 
 type Query {
   org(where: OrgInput): Org

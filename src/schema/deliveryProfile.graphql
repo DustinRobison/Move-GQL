@@ -1,0 +1,10 @@
+input DeliveryProfileInput {
+  id: ID!
+}
+
+type DeliveryProfile {
+  id: ID
+  name: String
+  instrumentLeadTimeDays: Int
+  turnTimeInMinutes: Int
+}
