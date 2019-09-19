@@ -42,3 +42,4 @@ type Query {
 # label vs displayText field name
 # single entity request params entity(id: ID!) or entity(where: entityInput), type entityInput { id: ID! }
 # Attribute to single entity instead of OrgUnits Attributes etc.
+# Single Plural Query instead of singluar that can accept array of IDs ?
