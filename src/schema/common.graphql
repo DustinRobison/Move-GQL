@@ -41,6 +41,14 @@ type Attribute {
   displayText: String
 }
 
+enum OrgType {
+  MED_DEVICE_COMPANY
+  HEALTH_SYSTEM
+  DISTRIBUTOR
+  PRACTICE
+  PARTNER
+}
+
 enum AttributableType {
   MDC_CASE_EVENT
   LOAN

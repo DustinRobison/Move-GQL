@@ -1,0 +1,23 @@
+input ProcedureInput {
+  id: ID!
+}
+
+type Procedure {
+  id: ID
+  name: String
+  bodySideRequired: Boolean
+  description: String
+  active: Boolean
+}
+
+input ProceduresInput {
+  active: Boolean
+  search: String
+  orderBy: OrderByParams
+  paging: PagingParams
+}
+
+type Procedures {
+  data: [Procedure]
+  moreData: Boolean
+}

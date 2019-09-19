@@ -2,7 +2,7 @@ const rp = require("request-promise");
 
 const Requester = (host, path, key, body) => {
   const postOptions = {
-    uri: `${host}${path}`,
+    uri: `${host}/api/${path}`,
     method: "POST",
     headers: {
       "Content-Type": "application/json",

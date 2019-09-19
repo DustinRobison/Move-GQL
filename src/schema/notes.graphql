@@ -19,6 +19,7 @@ type Note {
 input NotesInput {
   attrId: ID!
   noteIds: [ID]
+  paging: PagingParams
 }
 
 type Notes {

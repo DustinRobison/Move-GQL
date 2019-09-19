@@ -1,11 +1,14 @@
-const orgs = async (parent, args, ctx, info) => {
+const orgs = async (parent, args = { where: {} }, ctx, info) => {
   const res = await ctx.requester(
     ctx.hostName,
-    "/api/v1/directory/org/org/list_root_orgs",
+    "v1/directory/search/contacts",
     ctx.headers["move-session-id"],
-    { ...args }
+    { ...args.where, contactTypes: ["Org"] }
   );
-  return res;
+  return {
+    data: res.contacts,
+    moreData: res.moreData
+  };
 };
 
 module.exports = orgs;

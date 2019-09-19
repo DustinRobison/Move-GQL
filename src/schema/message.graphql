@@ -6,12 +6,11 @@ type Message {
   id: ID
   urgency: String
   purpose: String
-  allParticipantsDisplayText: String
-  particiapntsDisplayText: [String]
   stopped: Boolean
   archived: Boolean
   unread: Int
-  lastSender: [Person]
+  lastSender: Person
+  participants: [Person]
   links: [Attribute]
 }
 

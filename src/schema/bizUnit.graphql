@@ -1,0 +1,23 @@
+input BizUnitInput {
+  id: ID!
+}
+
+type BizUnit {
+  id: ID
+  org: Org
+  key: String
+  name: String
+  email: Email
+  description: String
+  publicListing: Boolean
+  active: Boolean
+}
+
+input BizUnitsInput {
+  search: String
+}
+
+type BizUnits {
+  data: [BizUnit]
+  moreData: Boolean
+}

@@ -25,11 +25,3 @@ type Orgs {
   data: [Org]
   moreData: Boolean
 }
-
-enum OrgType {
-  MED_DEVICE_COMPANY
-  HEALTH_SYSTEM
-  DISTRIBUTOR
-  PRACTICE
-  PARTNER
-}
