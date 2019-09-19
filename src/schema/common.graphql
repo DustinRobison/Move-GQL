@@ -94,3 +94,14 @@ enum Status {
   ACTIVE
   INACTIVE
 }
+
+enum RestockType {
+  ON_USAGE
+  PAR
+}
+
+enum LoanSplitMethod {
+  SURGEON
+  REP_TEAM
+  NONE
+}

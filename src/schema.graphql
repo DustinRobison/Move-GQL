@@ -7,6 +7,7 @@
 # import * from './schema/person.graphql'
 # import * from './schema/procedure.graphql'
 # import * from './schema/orgUnit.graphql'
+# import * from './schema/facility.graphql'
 
 type Query {
   org(where: OrgInput): Org
@@ -32,6 +33,9 @@ type Query {
 
   orgUnit(where: OrgUnitInput): OrgUnit
   orgUnits(where: OrgUnitsInput): OrgUnits
+
+  facility(where: FacilityInput): Facility
+  facilities(where: FacilitiesInput): Facilities
 }
 
 # Notes
