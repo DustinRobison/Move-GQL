@@ -1,24 +1,20 @@
-input BizUnitInput {
-  id: ID!
-}
-
 type BizUnit {
   id: ID
-  org: Org
-  key: String
   name: String
-  email: Email
   description: String
-  publicListing: Boolean
   active: Boolean
-  linkedOrgUnits: [OrgUnit]
+  email: String
+  key: String
+  publicListing: Boolean
+  org: Org
+  notes: [Note]
+  messages: [Message]
+  procedures: [Procedure]
+  orgUnits: [OrgUnit]
+  delegates: [User]
 }
 
-input BizUnitsInput {
-  search: String
-}
-
-type BizUnits {
+type BizUnitsOutput {
   data: [BizUnit]
   moreData: Boolean
 }

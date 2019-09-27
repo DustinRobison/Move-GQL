@@ -1,7 +1,3 @@
-input CourierProfileInput {
-  id: ID!
-}
-
 type CourierProfile {
   id: ID
   name: String

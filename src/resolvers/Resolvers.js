@@ -38,14 +38,7 @@ const bizUnits = async (parent, args, ctx, info) => {
 };
 
 const Resolvers = {
-  Query: {
-    org,
-    orgs,
-    delegate,
-    delegates,
-    bizUnit,
-    bizUnits
-  }
+  Query: {}
 };
 
 module.exports = Resolvers;

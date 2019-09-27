@@ -1,3 +1,9 @@
+input ListInput {
+  search: String
+  paging: PagingParams
+  orderBy: OrderByParams
+}
+
 input PagingParams {
   startRecordIdx: Int
   pageSize: Int

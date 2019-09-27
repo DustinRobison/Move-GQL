@@ -1,10 +1,9 @@
-input DeliveryProfileInput {
-  id: ID!
-}
-
 type DeliveryProfile {
   id: ID
   name: String
+  description: String
+  active: Boolean
+
   instrumentLeadTimeDays: Int
   turnTimeInMinutes: Int
 }

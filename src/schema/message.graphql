@@ -1,7 +1,3 @@
-input MessageInput {
-  id: ID!
-}
-
 type Message {
   id: ID
   urgency: String
@@ -9,8 +5,8 @@ type Message {
   stopped: Boolean
   archived: Boolean
   unread: Int
-  lastSender: Person
-  participants: [Person]
+  lastSender: User
+  participants: [User]
   links: [Attribute]
 }
 
@@ -24,9 +20,4 @@ input MessagesInput {
   contactIds: [ID]
   urgencyStartDate: String
   urgencyEndDate: String
-}
-
-type Messages {
-  data: [Message]
-  moreData: Boolean
 }

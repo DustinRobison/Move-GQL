@@ -1,26 +1,11 @@
-input ProcedureInput {
-  id: ID!
-}
-
 type Procedure {
   id: ID
   name: String
   description: String
+  active: Boolean
+
   icdCode: String
   bodySideRequired: Boolean
-  active: Boolean
   bizUnit: BizUnit
   parentProcedure: Procedure
-}
-
-input ProceduresInput {
-  active: Boolean
-  search: String
-  orderBy: OrderByParams
-  paging: PagingParams
-}
-
-type Procedures {
-  data: [Procedure]
-  moreData: Boolean
 }

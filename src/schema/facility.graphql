@@ -1,43 +1,38 @@
-input FacilityInput {
-  id: ID!
-}
-
 type Facility {
   id: ID!
-  org: Org
-  type: FacilityType
   name: String
-  displayText: String
+  description: String
+  active: Boolean
+
+  type: FacilityType
+  label: String
+  defaultDeliverToAddress: Address
   email: Email
   timeZone: String
   caseLoaningMethodology: CaseLoaningMethodologyType
   restockType: RestockType
-  contact: Person
-  publicVisible: Boolean
-  binManaged: Boolean
-  autoPutAway: Boolean
+  contact: Contact
+
   opsProfile: OpsProfile
   deliveryScheduleProfile: DeliveryProfile
   courierProfile: CourierProfile
-  lagTime: Int
-  splitImplantsAndInstruments: Boolean
-
   loanSplitMethod: LoanSplitMethod
-  optimizeLoans: Boolean
   customer: Customer
-  defaultDeliverToAddress: Address
-  active: Boolean
-}
 
-input FacilitiesInput {
-  search: String
-  paging: PagingParams
-  orderBy: OrderByParams
-}
+  optimizeLoans: Boolean
+  splitImplantsAndInstruments: Boolean
+  binManaged: Boolean
+  autoPutAway: Boolean
+  publicVisible: Boolean
 
-type Facilities {
-  data: [Facility]
-  moreData: Boolean
+  extendedContacts: [Contact]
+  notes: [Note]
+  messages: [Message]
+  orgUnits: [OrgUnit]
+  physicians: [Physician]
+  contacts: [Contact]
+  zones: [Zone]
+  preferenceCards: [PreferenceCard]
 }
 
 enum FacilityType {

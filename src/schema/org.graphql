@@ -1,16 +1,13 @@
-input OrgInput {
-  id: ID!
-}
-
 type Org {
   id: ID
-  reference: String
   name: String
+  description: String
+  active: Boolean
+  reference: String
   type: OrgType
   address: Address
   email: Email
-  publicVisible: Boolean!
-  active: Boolean!
+  publicVisible: Boolean
 }
 
 input OrgsInput {
@@ -21,9 +18,4 @@ input OrgsInput {
   active: Boolean
   orderBy: OrderByParams
   paging: PagingParams
-}
-
-type Orgs {
-  data: [Org]
-  moreData: Boolean
 }

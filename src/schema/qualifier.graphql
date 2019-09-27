@@ -1,0 +1,6 @@
+type Qualifier {
+  id: ID
+  type: String
+  value: String
+  priority: String
+}

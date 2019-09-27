@@ -1,49 +1,80 @@
-# import * from './schema/common.graphql'
-# import * from './schema/org.graphql'
-# import * from './schema/delegate.graphql'
-# import * from './schema/bizUnit.graphql'
-# import * from './schema/notes.graphql'
-# import * from './schema/message.graphql'
-# import * from './schema/person.graphql'
-# import * from './schema/procedure.graphql'
-# import * from './schema/orgUnit.graphql'
-# import * from './schema/facility.graphql'
-# import * from './schema/opsProfile.graphql'
-# import * from './schema/deliveryProfile.graphql'
-# import * from './schema/courierProfile.graphql'
-# import * from './schema/customer.graphql'
+# import * from './schema/bizUnit.graphql'
+# import * from './schema/common.graphql'
+# import * from './schema/contact.graphql'
+# import * from './schema/courierProfile.graphql'
+# import * from './schema/customer.graphql'
+# import * from './schema/deliveryProfile.graphql'
+# import * from './schema/facility.graphql'
+# import * from './schema/itemCategory.graphql'
+# import * from './schema/message.graphql'
+# import * from './schema/note.graphql'
+# import * from './schema/opsProfile.graphql'
+# import * from './schema/org.graphql'
+# import * from './schema/orgUnit.graphql'
+# import * from './schema/physician.graphql'
+# import * from './schema/preferenceCard.graphql'
+# import * from './schema/procedure.graphql'
+# import * from './schema/qualifier.graphql'
+# import * from './schema/team.graphql'
+# import * from './schema/user.graphql'
+# import * from './schema/zone.graphql'
 
-type Query {
-  org(where: OrgInput): Org
-  orgs(where: OrgsInput): Orgs
+type Query {
+  # bizUnit(id: ID!): BizUnit
+  # bizUnits(where: ListInput): BizUnitOutput
 
-  person(where: PersonInput): Person
-  persons(where: PersonsInput): Persons
+  # contact(id: ID!): Contact
+  # contacts(where: ListInput): {data: [Contact], moreData: Boolean}
 
-  delegate(where: DelegateInput): Delegate
-  delegates(where: DelegatesInput): Delegates
+  # courierProfile(id: ID!): CourierProfile
+  # courierProfiles(where: ListInput): {data: [courierProfile], moreData: Boolean}
 
-  note(where: NoteInput): Note
-  notes(where: NotesInput): Notes
+  # customer(id: ID!): Customer
+  # customers(where: ListInput): {data: [Customer], moreData: Boolean}
 
-  message(where: MessageInput): Message
-  messages(where: MessagesInput, paging: PagingParams): Messages
+  # deliveryProfile(id: ID!): DeliveryProfile
+  # deliveryProfiles(where: ListInput): {data: [DeliveryProfile], moreData: Boolean}
 
-  bizUnit(where: BizUnitInput): BizUnit
-  bizUnits(where: BizUnitsInput): BizUnits
+  # facility(id: ID!): Facility
+  # facilities(where: ListInput): {data: [Facility], moreData: Boolean}
 
-  procedure(where: ProcedureInput): Procedure
-  procedures(where: ProceduresInput): Procedures
+  # itemCategory(id: ID!): ItemCategory
+  # itemCategories(where: ListInput): {data: [ItemCategory], moreData: Boolean}
 
-  orgUnit(where: OrgUnitInput): OrgUnit
-  orgUnits(where: OrgUnitsInput): OrgUnits
+  # message(id: ID!): Message
+  # messages(where: MessagesInput): {data: [Message], moreData: Boolean}
 
-  facility(where: FacilityInput): Facility
-  facilities(where: FacilitiesInput): Facilities
+  # note(id: ID!): Note
+  # notes(where: NotesInput): {data: [Note], moreData: Boolean}
+
+  # opsProfile(id: ID!): OpsProfile
+  # opsrofiles(where: ListInput): {data: [OpsProfile], moreData: Boolean}
+
+  # org(id: ID!): Org
+  # orgs(where: OrgsInput): {data: [Org], moreData: Boolean}
+
+  # orgUnit(id: ID!): OrgUnit
+  # orgUnits(where: ListInput): {data: [OrgUnit], moreData: Boolean}
+
+  # physician(id: ID!): Physician
+  # physicians(where: ListInput): {data: [Physician], moreData: Boolean}
+
+  # preferenceCard(id: ID!): PreferenceCard
+  # preferenceCards(where: ListInput): {data: [PreferenceCard], moreData: Boolean}
+
+  # procedure(id: ID!): Procedure
+  # procedures(where: ListInput): {data: [Procedure], moreData: Boolean}
+
+  # qualifier(id: ID!): Qualifier
+  # qualifiers(where: ListInput): {data: [Qualifier], moreData: Boolean}
+
+  # team(id: ID!): Team
+  # teams(where: ListInput): {data: [Team], moreData: Boolean}
+
+  # user(id: ID!): User
+  # users(where: ListInput): {data: [User], moreData: Boolean}
+
+  # zone(id: ID!): Zone
+  # zones(where: ListInput): {data: [Zone], moreData: Boolean}
 }
 
-# Notes
-# label vs displayText field name
-# single entity request params entity(id: ID!) or entity(where: entityInput), type entityInput { id: ID! }
-# Attribute to single entity instead of OrgUnits Attributes etc.
-# Single Plural Query instead of singluar that can accept array of IDs ?

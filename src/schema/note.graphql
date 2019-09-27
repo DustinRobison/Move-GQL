@@ -1,19 +1,13 @@
-input NoteInput {
-  id: ID!
-  attrId: ID
-}
-
 type Note {
   id: ID
   org: Org
-  ownerOrgUnit: Org
+  ownerOrgUnit: OrgUnit
   attr: Attribute
   orgVisible: Boolean
   publicVisible: Boolean
-  noteValue: String
-  createById: String
+  value: String
   dateCreated: String
-  createdByDisplayName: String
+  createdBy: User
 }
 
 input NotesInput {

@@ -1,0 +1,11 @@
+type Zone {
+  id: ID
+  name: String
+  description: String
+  active: Boolean
+}
+
+type ZonesOutput {
+  data: [Zone]
+  moreData: Boolean
+}

@@ -1,0 +1,10 @@
+type Contact {
+  id: ID
+  name: PersonName
+  reference: String
+  description: String
+  email: String
+  workPhone: String
+  mobilePhone: String
+  faxPhone: String
+}

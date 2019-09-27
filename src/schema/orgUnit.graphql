@@ -1,16 +1,14 @@
-input OrgUnitInput {
-  id: ID!
-}
-
 type OrgUnit {
   id: ID
   name: String
   description: String
+  active: Boolean
+
   label: String
   publicName: String
   schema: String
   email: Email
-  active: Boolean
+
   bottom: Boolean
   fulfillmentLeadTimeHours: Int
   requirementsLeadTimeHours: Int
@@ -18,6 +16,7 @@ type OrgUnit {
   allowMixedInventoryTypeUsage: Boolean
   signUpAllowed: Boolean
   publicListing: Boolean
+
   org: Org
   parentOrgUnit: OrgUnit
   rootOrgUnit: OrgUnit
@@ -25,12 +24,18 @@ type OrgUnit {
   salesOrgUnit: OrgUnit
   attributes: [Attribute]
   attributeContacts: [Person]
-}
 
-input OrgUnitsInput {
-  search: String
-  paging: PagingParams
-  orderBy: OrderByParams
+  extendedContacts: [Contact]
+  notes: [Note]
+  messages: [Message]
+  bizUnits: [BizUnit]
+  facilities: [Facility]
+  contacts: [Contact]
+  teams: [Team]
+  physicians: [Physician]
+  itemCategories: [ItemCategory]
+  qualifiers: [Qualifier]
+  preferenceCards: [PreferenceCard]
 }
 
 type OrgUnits {

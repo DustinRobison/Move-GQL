@@ -1,0 +1,23 @@
+type Physician {
+  id: ID
+  name: PersonName
+  type: PhysicianType
+  reference: String
+  active: Boolean
+
+  mobilePhone: PhoneNumber
+  workPhone: PhoneNumber
+  email: Email
+
+  attributes: [Attribute]
+  notes: [Note]
+  messages: [Message]
+  procedures: [Procedure]
+  facilities: [Facility]
+  orgUnits: [OrgUnit]
+  preferenceCards: [PreferenceCard]
+}
+
+enum PhysicianType {
+  SURGEON
+}
